@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DotnetCore.BestPractices.Core\DotnetCore.BestPractices.Core.csproj" />
+    <ProjectReference Include="..\DotnetCore.BestPractices.Data\DotnetCore.BestPractices.Data.csproj" />
+    <ProjectReference Include="..\DotnetCore.BestPractices.Service\DotnetCore.BestPractices.Service.csproj" />
+  </ItemGroup>
+
+</Project>
