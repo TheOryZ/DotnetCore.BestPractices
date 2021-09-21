@@ -14,7 +14,7 @@ namespace DotnetCore.BestPractices.Core.Entites.Concrete
         public int Stock { get; set; }
         public int CategoryId { get; set; }
         public decimal Price { get; set; }
-        public string BannerCode { get; set; }
+        public string InnerBarcode { get; set; }
         public bool IsDeleted { get; set; }
 
         public virtual Category Category { get; set; }
