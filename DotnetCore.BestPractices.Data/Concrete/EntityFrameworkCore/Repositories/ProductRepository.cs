@@ -14,7 +14,7 @@ namespace DotnetCore.BestPractices.Data.Concrete.EntityFrameworkCore.Repositorie
     public class ProductRepository : GenericRepository<Product>, IProductRepository
     {
         private AppDbContext _appDbContext { get => _context as AppDbContext; }
-        public ProductRepository(DbContext context) : base(context)
+        public ProductRepository(AppDbContext context) : base(context)
         {
         }
 

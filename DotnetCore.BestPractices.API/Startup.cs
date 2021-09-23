@@ -1,6 +1,11 @@
+using DotnetCore.BestPractices.Core.Interfaces.Repositories;
+using DotnetCore.BestPractices.Core.Interfaces.Services;
 using DotnetCore.BestPractices.Core.Interfaces.UnitOfWorks;
 using DotnetCore.BestPractices.Data.Concrete.EntityFrameworkCore.Context;
+using DotnetCore.BestPractices.Data.Concrete.EntityFrameworkCore.Repositories;
 using DotnetCore.BestPractices.Data.Concrete.EntityFrameworkCore.UnitOfWorks;
+using DotnetCore.BestPractices.Service.Containers.MicrosoftIoC;
+using DotnetCore.BestPractices.Service.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -36,7 +41,8 @@ namespace DotnetCore.BestPractices.API
                     o.MigrationsAssembly("DotnetCore.BestPractices.Data");
                 });
             });
-            services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddAutoMapper(typeof(Startup));
+            services.AddDependencies();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
@@ -54,7 +60,7 @@ namespace DotnetCore.BestPractices.API
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "DotnetCore.BestPractices.API v1"));
             }
-
+            // TODO : Swagger üzerinde DTO nesneleri gözükmemekte. Tekrardan kontrol edilecek.
             app.UseHttpsRedirection();
 
             app.UseRouting();

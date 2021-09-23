@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotnetCore.BestPractices.API", "DotnetCore.BestPractices.API\DotnetCore.BestPractices.API.csproj", "{2BCC8D4E-3FA3-4688-B7C1-AE05FA184796}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotnetCore.BestPractices.API", "DotnetCore.BestPractices.API\DotnetCore.BestPractices.API.csproj", "{2BCC8D4E-3FA3-4688-B7C1-AE05FA184796}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotnetCore.BestPractices.Core", "DotnetCore.BestPractices.Core\DotnetCore.BestPractices.Core.csproj", "{9A62A574-FDF0-4286-9749-8804C22A3BEA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotnetCore.BestPractices.Core", "DotnetCore.BestPractices.Core\DotnetCore.BestPractices.Core.csproj", "{9A62A574-FDF0-4286-9749-8804C22A3BEA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotnetCore.BestPractices.Data", "DotnetCore.BestPractices.Data\DotnetCore.BestPractices.Data.csproj", "{9A3AC20D-8699-44FB-95D0-9796ECE2119B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotnetCore.BestPractices.Data", "DotnetCore.BestPractices.Data\DotnetCore.BestPractices.Data.csproj", "{9A3AC20D-8699-44FB-95D0-9796ECE2119B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotnetCore.BestPractices.Service", "DotnetCore.BestPractices.Service\DotnetCore.BestPractices.Service.csproj", "{D03DA5AA-D887-44A7-BF9A-6D779673D041}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotnetCore.BestPractices.Service", "DotnetCore.BestPractices.Service\DotnetCore.BestPractices.Service.csproj", "{D03DA5AA-D887-44A7-BF9A-6D779673D041}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotnetCore.BestPractices.DTO", "DotnetCore.BestPractices.DTO\DotnetCore.BestPractices.DTO.csproj", "{5A386B46-B7F5-4E2C-A164-CE84CA4962FC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{D03DA5AA-D887-44A7-BF9A-6D779673D041}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D03DA5AA-D887-44A7-BF9A-6D779673D041}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D03DA5AA-D887-44A7-BF9A-6D779673D041}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A386B46-B7F5-4E2C-A164-CE84CA4962FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A386B46-B7F5-4E2C-A164-CE84CA4962FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A386B46-B7F5-4E2C-A164-CE84CA4962FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A386B46-B7F5-4E2C-A164-CE84CA4962FC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

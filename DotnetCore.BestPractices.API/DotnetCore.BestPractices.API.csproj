@@ -5,6 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.10">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -15,6 +17,7 @@
   <ItemGroup>
     <ProjectReference Include="..\DotnetCore.BestPractices.Core\DotnetCore.BestPractices.Core.csproj" />
     <ProjectReference Include="..\DotnetCore.BestPractices.Data\DotnetCore.BestPractices.Data.csproj" />
+    <ProjectReference Include="..\DotnetCore.BestPractices.DTO\DotnetCore.BestPractices.DTO.csproj" />
     <ProjectReference Include="..\DotnetCore.BestPractices.Service\DotnetCore.BestPractices.Service.csproj" />
   </ItemGroup>
 

@@ -1,5 +1,6 @@
 ﻿using DotnetCore.BestPractices.Core.Entites.Interfaces;
 using DotnetCore.BestPractices.Core.Interfaces.Repositories;
+using DotnetCore.BestPractices.Data.Concrete.EntityFrameworkCore.Context;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -14,7 +15,7 @@ namespace DotnetCore.BestPractices.Data.Concrete.EntityFrameworkCore.Repositorie
     {
         protected readonly DbContext _context;
         private readonly DbSet<TEntity> _dbSet;
-        public GenericRepository(DbContext context)
+        public GenericRepository(AppDbContext context)
         {
             _context = context;
             _dbSet = context.Set<TEntity>();
@@ -29,9 +30,9 @@ namespace DotnetCore.BestPractices.Data.Concrete.EntityFrameworkCore.Repositorie
             await _dbSet.AddRangeAsync(entities);
         }
 
-        public IEnumerable<TEntity> WhereAsync(Expression<Func<TEntity, bool>> predicate)
+        public async Task<IEnumerable<TEntity>> WhereAsync(Expression<Func<TEntity, bool>> predicate)
         {
-            return _dbSet.Where(predicate);
+            return await _dbSet.Where(predicate).ToListAsync();
         }
 
         public async Task<IEnumerable<TEntity>> GetAllAsync()
