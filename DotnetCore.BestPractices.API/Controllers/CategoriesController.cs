@@ -35,9 +35,16 @@ namespace DotnetCore.BestPractices.API.Controllers
         {
             var category = await _categoryService.GetByIdAsync(id);
             if(category != null)
-                return Ok(_mapper.Map<IEnumerable<CategoryListDto>>(category));
+                return Ok(_mapper.Map<CategoryListDto>(category));
             return NotFound("This category number does not exist");
 
+        }
+
+        [HttpGet("{id}/products")]
+        public async Task<IActionResult> GetWithProductsById(int id)
+        {
+            var category = await _categoryService.GetWithProductsByIdAsync(id);
+            return Ok(_mapper.Map<CategoryWithProductDto>(category));
         }
 
         [HttpPost]

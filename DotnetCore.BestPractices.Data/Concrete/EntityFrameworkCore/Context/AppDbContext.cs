@@ -21,6 +21,7 @@ namespace DotnetCore.BestPractices.Data.Concrete.EntityFrameworkCore.Context
         {
             modelBuilder.ApplyConfiguration(new ProductConfiguration());
             modelBuilder.ApplyConfiguration(new CategoryConfiguration());
+            modelBuilder.ApplyConfiguration(new PersonConfiguration());
 
             modelBuilder.ApplyConfiguration(new ProductSeed(new int[] {1,2}));
             modelBuilder.ApplyConfiguration(new CategorySeed(new int[] {1,2}));
@@ -28,5 +29,6 @@ namespace DotnetCore.BestPractices.Data.Concrete.EntityFrameworkCore.Context
 
         public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }
+        public DbSet<Person> People { get; set; }
     }
 }
